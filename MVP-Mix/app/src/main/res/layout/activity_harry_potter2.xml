@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HarryPotter2">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harry acordou cedo na manhã seguinte. Embora soubesse que já era dia, continuou com os olhos bem fechados.
+" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="“Foi um sonho”, disse a si mesmo com firmeza. “Sonhei que um gigante chamado Rúbeo Hagrid veio me dizer que eu ia para uma escola de magia. Quando abrir os olhos estarei em casa no meu armário.”
+"/>
+
+    <TextView
+        android:id="@+id/somBatida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0056d4"
+        android:text="De repente ouviu um ruído alto de batidas
+"
+        android:onClick=""
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Próximo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.995" />
+</LinearLayout>
