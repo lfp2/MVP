@@ -14,7 +14,7 @@ public class HarryPotter extends AppCompatActivity {
 
     }
     public void startSecondActivity(View view){
-        Intent intent = new Intent(this,HarryPotter2.class);
+        Intent intent = new Intent(this, HarryPotter2.class);
         startActivity(intent);
     }
 }

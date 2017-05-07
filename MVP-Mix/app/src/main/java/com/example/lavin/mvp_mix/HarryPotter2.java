@@ -1,11 +1,10 @@
 package com.example.lavin.mvp_mix;
 
-import android.support.v7.app.AppCompatActivity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.media.MediaPlayer;
 import android.content.res.AssetFileDescriptor;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import java.io.IOException;
 
@@ -16,6 +15,7 @@ import java.io.IOException;
 public class HarryPotter2 extends AppCompatActivity {
     private MediaPlayer player;
     private AssetFileDescriptor afd;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_harry_potter2);
@@ -29,7 +29,7 @@ public class HarryPotter2 extends AppCompatActivity {
             // Set the looping and play the music.
             player.setLooping(false);
             player.prepare();
-            } catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -37,9 +37,23 @@ public class HarryPotter2 extends AppCompatActivity {
         super.onResume();
         player.start();
     }
-   /* public void startSound(View view){
-        Intent intent = new Intent(this,HarryPotter2.onResume());
-        startActivity(intent);
-    }*/
+
+   public void callSeconSound(View view) {
+       player.stop();
+
+       try {
+           // Read the music file from the asset folder
+           afd = getAssets().openFd("????????????.mp3"); /* ESCREVER AQUI O NOME DO SEGUNDO ARQUIVO */
+           // Creation of new media player;
+           player = new MediaPlayer();
+           // Set the player music source.
+           player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(),afd.getLength());
+           // Set the looping and play the music.
+           player.setLooping(false);
+           player.prepare();
+       } catch (IOException e) {
+           e.printStackTrace();
+       }
+   }
 
 }

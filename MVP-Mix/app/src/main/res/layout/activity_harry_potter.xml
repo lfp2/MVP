@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.lavin.mvp_mix.HarryPotter">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hogwarts0"
+        android:alpha="0.3"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Você irá ler um trecho de Harry Potter com sons ambientes e algumas sonoplastias."
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif"
+        android:layout_centerVertical="true"
         android:layout_height="wrap_content"
-        android:text="Você irá ler um trecho de Harry Potter com sons ambientes
-e algumas sonoplastias (que precisam ser clicadas)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintVertical_bias="0.033" />
+        android:layout_width="wrap_content"
+        android:padding="10dp" />
+
     <Button
         android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
         android:text="Próximo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="14sp"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="startSecondActivity"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.995" />
-
-</android.support.constraint.ConstraintLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/roundbtn"
+        android:backgroundTint="@android:color/black" />
+        <!--android:backgroundTint="#ABABAB"-->
+</RelativeLayout>
